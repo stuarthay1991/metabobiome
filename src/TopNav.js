@@ -9,15 +9,13 @@ import oncologo from './images/metabobiome_logo.png';
 function loadAbout()
 {
   document.getElementById("aboutpanel").style.display = "block";
-  document.getElementById("contactpanel").style.display = "none";
   document.getElementById("tabcontent").style.display = "none";
 }
 
-function loadContact()
+function loadHome()
 {
-  document.getElementById("contactpanel").style.display = "block";
   document.getElementById("aboutpanel").style.display = "none";
-  document.getElementById("tabcontent").style.display = "none";
+  document.getElementById("tabcontent").style.display = "block";
 }
 
 function TopNav() {
@@ -49,7 +47,7 @@ function TopNav() {
     <div className={classes.mainpane} style={{ fontFamily: 'Roboto' }}>
       <div className={classes.mainpane_margin}>
       <Grid container spacing={1}>
-        <Grid container item xs={9}>
+        <Grid container item xs={8}>
         <Grid item>
           <div className={classes.cntr_special}>{oncoimg}</div>
         </Grid>
@@ -62,8 +60,8 @@ function TopNav() {
         <Grid item xs={26}>
         </Grid>
         </Grid>
-        <Grid container item xs={2} justifyContent="flex-end">
-        <div className={classes.cntr_generic}><a style={{cursor: "pointer"}}>About</a> | <a style={{cursor: "pointer"}}>Download</a></div>
+        <Grid container item xs={3} justifyContent="flex-end">
+        <div className={classes.cntr_generic}><a onClick={loadHome} style={{cursor: "pointer"}}>Home</a> | <a onClick={loadAbout} style={{cursor: "pointer"}}>About</a> | <a href="https://www.synapse.org/#!Synapse:syn51607216/wiki/622401" target="_blank" style={{cursor: "pointer"}}>Download</a></div>
         </Grid>
       </Grid>
       </div>

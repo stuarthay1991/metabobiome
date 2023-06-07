@@ -44,6 +44,7 @@ function cellGroupPlotPanel(selectedRow, selectedExpressionArray, heatmapColumnA
         type: 'violin',
         mode: 'lines+markers',
         points: "all",
+        pointpos: 0,
         name: name,
         marker: {color: curcolor},
       });
