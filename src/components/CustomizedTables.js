@@ -34,9 +34,25 @@ const tableStyles = makeStyles({
   },
 });
 
+function gCheck(rname, rval) {
+  if(rname == "Symbol"){
+    if(rval != "NA"){
+      var linkout = "https://www.genecards.org/cgi-bin/carddisp.pl?gene=".concat(rval);
+      var retval = <a href={linkout} style={{textDecoration: "underlined"}} target="_blank"><u>{rval}</u></a>
+      return retval;
+    }
+    else{
+      return rval;
+    }
+  }
+  else{
+    return rval;
+  }
+}
+
 function CustomizedTables(props) {
   const classes = tableStyles();
-
+  //https://www.genecards.org/cgi-bin/carddisp.pl?gene=
   return (
     <div>
     <TableContainer component={Paper}>
@@ -51,7 +67,7 @@ function CustomizedTables(props) {
           {props.contents.map((row) => (
             <StyledTableRow key={row.name}>
               <StyledTableCell component="th" scope="row">{row.name}</StyledTableCell>
-              <StyledTableCell align="left">{row.value}</StyledTableCell>
+              <StyledTableCell align="left">{gCheck(row.name, row.value)}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

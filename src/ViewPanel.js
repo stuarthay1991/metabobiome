@@ -302,9 +302,20 @@ function updateOkmapTable(data){
   }
   else
   {
+    var d_uid = data["uid"];
+    var d_annot = data["annot"];
+    console.log("uidClicks", data["uid"]);
+    if(d_uid == undefined)
+    {
+      d_uid = "NA";
+    }
+    if(d_annot == undefined)
+    {
+      d_annot = "NA";
+    }
     var new_row = [
-      createData("Symbol", data["uid"]),
-      createData("Annotation", data["annot"]),
+      createData("Symbol", d_uid),
+      createData("Annotation", d_annot),
     ];
   }
   this.setState({
@@ -432,6 +443,11 @@ class OKMAP_LABEL extends React.Component {
           .attr("height", 15)
           .attr("fill", color);
 
+      if(curchars == "EF" || curchars == "_EF")
+      {
+        curchars = "OF";
+      }
+      curchars = curchars.replaceAll("_", "");
       this.SVG_main_group.append("text")
           .attr("x", (legend_x+20))
           .attr("y", (legend_y+10))

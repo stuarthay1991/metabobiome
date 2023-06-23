@@ -37,6 +37,11 @@ function cellGroupPlotPanel(selectedRow, selectedExpressionArray, heatmapColumnA
         }
       }
       var name = filterSet[i];
+      if(name == "EF" || name == "_EF")
+      {
+        name = "OF";
+      }
+      name = name.replaceAll("_", "");
       var curcolor = global_colors[i];
       console.log(curcol);
       datarray.push({

@@ -1,0 +1,8 @@
+.DS_store
+node_modules
+dist
+assets
+python
+build
+src/components/.DS_Store
+src/pages/.DS_Store

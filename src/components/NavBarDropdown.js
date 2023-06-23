@@ -48,8 +48,8 @@ const cKitCell = ["naive_B","ERP2","DC","IG2","Mac_2","pro_B","Monocyte_3","Mult
 "NK","pre_B","Baso","Multi_Lin_1","ERP4","preNeu_2","Mast","MP","MPP4","MKP","MDP","ERP1",
 "proNeu_1","preNeu_1"];
 
-const spleenCell = ["naive_CD4_T_","pDC","Neu_c19","Naive_CD8_T_","DC_c1","Treg","DC_c4","plasma",
-"inflammatory_Mac","NK","Basophil","Monocyte_derived_Mac","B","Mac","DC_c10","memory_T_","cell_cycle",
+const spleenCell = ["naive_CD4_T","pDC","Neu_c19","Naive_CD8_T","DC_c1","Treg","DC_c4","plasma",
+"inflammatory_Mac","NK","Basophil","Monocyte_derived_Mac","B","Mac","DC_c10","memory_T","cell_cycle",
 "Neu_c5","cDC1"];
 
 const boneMarrowCell = ["Mac_c9","HSCP_MPP_c13","Mast_c10","Neu_c22","proNeu_1_c12",
